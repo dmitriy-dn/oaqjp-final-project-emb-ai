@@ -28,9 +28,10 @@ def emotion_detector(text_to_analyse):
     dominant_emotion = None
 
     for k, v in emotions.items():
-        if v > emotion_cost:
-            emotion_cost = v
-            dominant_emotion = k
+        if v != None:
+            if v > emotion_cost:
+                emotion_cost = v
+                dominant_emotion = k
 
     emotions['dominant_emotion'] = dominant_emotion
 
